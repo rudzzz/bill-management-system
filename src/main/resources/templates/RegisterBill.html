@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="/css/bootstrap.min.css" />
+	<title>Bill Register</title>
+</head>
+
+<body>
+	<header>
+		<nav class="navbar navbar-dark bg-dark">
+			<div class="container-fluid">
+				<span class="navbar-brand">
+					Bill Management System
+				</span>
+			</div>
+		</nav>
+	</header>
+	<div class="container">
+		<br>
+		<div class="card text-dark bg-light">
+			<div class="card-header">
+				<h1 class="card-title">New Bill</h1>
+			</div>
+			<div class="card-body">
+				<form method="POST" action="/bill">
+					<div class="row">
+						<div class="form-group">
+							<div class="col-md-4">
+								<label for="description">Description</label>
+								<input type="text" / class="form-control" id="description" name="description">
+							</div>
+							<div class="col-md-2">
+								<label for="date">Date</label>
+								<input type="text" / class="form-control" id="date" name="date">
+							</div>
+							<div class="col-md-2">
+								<label for="value">Value</label>
+								<input type="number" / class="form-control" id="value" name="value">
+							</div>
+							<div class="col-md-2">
+								<label for="status">Status</label>
+								<select class="form-control" name="status">
+									<option value="PENDENT">Pendent</option>
+									<option value="RECEIVED">Received</option>
+								</select>
+							</div>
+							<br>
+							<div class="col-md-2">
+								<button type="submit" class=" btn btn-success form-control">Save</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="/js/bootstrap.min.js"></script>
+</body>
+
+</html>
